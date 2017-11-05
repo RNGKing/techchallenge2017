@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>GnomeViz - Your Health, Visualized</title>
+        <meta name="An AR experience for your health, in competition with the Hudson Alpha Tech Challenge" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
+		<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+		<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    </head>
+
+    <body style='margin : 0px; overflow: hidden;'>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+		<a-scene embedded arjs='trackingMethod: best;'>
+	      <a-anchor hit-testing-enabled='true'>
+	      	<a-entity position='0.1 0.1 0.1' scale='0.1 0.1 0.1' gltf-model-next="src: url(models/organs.gltf);"></a-entity>
+	   		<a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+	   		<a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-0.5 1 1"></a-entity>
+	      </a-anchor>
+
+			<a-entity camera></a-entity>
+		</a-scene>
+
+	<div id="userControls">
+		<div id="partOne" class="parts">
+			<h2>Johnathan Daniels</h2>
+			<p>Age: 34</p>
+			<p>DOB: August 23, 1983</p>
+		</div>
+		<div id="partTwo" class="parts">
+			<h2>Your Major Concerns
+
+			<h3>Colon Ulcers</h3>
+			<h4>Ulcerative Colitis
+			<p>Ulcerative colitis (UL-sur-uh-tiv koe-LIE-tis) is an inflammatory bowel disease (IBD) that causes long-lasting inflammation and ulcers (sores) in your digestive tract. Ulcerative colitis affects the innermost lining of your large intestine (colon) and rectum.</p>
+
+			
+			<h3>Arthritis</h3>
+			<h4>Rheumatoid Arthritis
+			<p>An autoimmune disorder, rheumatoid arthritis occurs when your immune system mistakenly attacks your own body's tissues. Unlike the wear-and-tear damage of osteoarthritis, rheumatoid arthritis affects the lining of your joints, causing a painful swelling that can eventually result in bone erosion and joint deformity.</p>
+
+			
+			<h3>Chronic Liver Disease</h3>
+			<h4>Primary Biliary Cholangistis
+			<p>Primary biliary cholangitis (PBC), formerly known as primary biliary cirrhosis, is a chronic liver disease resulting from progressive destruction of the bile ducts in the liver – called the intrahepatic bile ducts.</p>
+
+			<h3>Eczema</h3>
+			<h4>Atopic Dermatitis
+			<p>Atopic dermatitis is the most common form of eczema and is caused by genetics and and external trigger. Symptoms include redness, dry skin and intense itch.</p>
+
+			<h3>Spine focused arthritis</h3>
+			<h4>Ankylosing Spondylitis
+			<p>Ankylosing spondylitis (pronounced ank-kih-low-sing spon-dill-eye-tiss), or AS, is a form of arthritis that primarily affects the spine, although other joints can become involved. It causes inflammation of the spinal joints (vertebrae) that can lead to severe, chronic pain and discomfort.</p>
+
+		</div>
+		<div id="partThree" class="parts">
+			<h2>Treatment Options
+			<h3>Colon Ulcers</h3>
+			<h4>Ulcerative Colitis
+		</div>
+	</div>
+
+	
+        <!-- Add your site or application content here -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
