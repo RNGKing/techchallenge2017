@@ -25,7 +25,9 @@
         <![endif]-->
 		<a-scene embedded arjs='trackingMethod: best;'>
 	      <a-anchor hit-testing-enabled='true'>
-	      	<a-entity position='0.1 0.1 0.1' scale='0.1 0.1 0.1' gltf-model-next="src: url(models/organs.gltf);"></a-entity>
+			  <a-entity id="sceneOne" position='0.1 0.1 0.1' scale='0.1 0.1 0.1' gltf-model-next="src: url(models/organs.gltf);"></a-entity>
+			  <a-entity id="sceneTwo" position='0.1 0.1 0.1' scale='0.1 0.1 0.1' gltf-model-next="src: url(models/organs.gltf);"></a-entity>
+			  <a-entity id="sceneThree" position='0.1 0.1 0.1' scale='0.1 0.1 0.1' gltf-model-next="src: url(models/organs.gltf);"></a-entity>
 	   		<a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
 	   		<a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-0.5 1 1"></a-entity>
 	      </a-anchor>
@@ -34,6 +36,9 @@
 		</a-scene>
 
 	<div id="userControls">
+		<button type="button" onclick='loadPageOne()'>Page One</button>
+		<button type="button" onclick='loadPageTwo()'>Page Two</button>
+		<button type="button" onclick='loadPageThree()'>Page Three</button>
 		<div id="partOne" class="parts">
 			<h2>Johnathan Daniels</h2>
 			<p>Age: 34</p>
@@ -79,5 +84,44 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-    </body>
+	</body>
+	
+	<script>
+			function loadPageOne(){
+				console.log("loading page one");
+				var sceneOneEnt = document.getElementById('sceneOne');
+				var sceneTwoEnt = document.getElementById('sceneTwo');
+				var sceneThreeEnt = document.getElementById('sceneThree');
+				
+				sceneOneEnt.setAttribute('visible', true);
+				sceneTwoEnt.setAttribute('visible', false);
+				sceneThreeEnt.setAttribute('visible', false);
+	
+			}
+			
+			function loadPageTwo(){
+				console.log("loading page two");
+				var sceneOneEnt = document.getElementById('sceneOne');
+				var sceneTwoEnt = document.getElementById('sceneTwo');
+				var sceneThreeEnt = document.getElementById('sceneThree');
+	
+				sceneOneEnt.setAttribute('visible', false);
+				sceneTwoEnt.setAttribute('visible', true);
+				sceneThreeEnt.setAttribute('visible', false);
+			   
+			}
+	
+			function loadPageThree(){
+				console.log("loading page three");
+				var sceneOneEnt = document.getElementById('sceneOne');
+				var sceneTwoEnt = document.getElementById('sceneTwo');
+				var sceneThreeEnt = document.getElementById('sceneThree');
+	
+				sceneOneEnt.setAttribute('visible', false);
+				sceneTwoEnt.setAttribute('visible', false);
+				sceneThreeEnt.setAttribute('visible', true);
+
+			}
+	
+		</script>
 </html>
